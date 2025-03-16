@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>France Milsim - Serveur Arma Reforger</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1b1b1b;
+            color: #dcdcdc;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: url('https://www.defense.gouv.fr/sites/default/files/styles/image_liste/public/2022-06/2022_TOM_ARMTF_CL_011_001.jpg') center/cover;
+            padding: 50px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            border-bottom: 4px solid #ffcc00;
+        }
+
+        nav {
+            background: #252525;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu > li {
+            display: inline-block;
+            position: relative;
+        }
+
+        .menu > li > a {
+            display: block;
+            padding: 12px 20px;
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu > li:hover > a {
+            background: #ffcc00;
+            color: #1b1b1b;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background: #333;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            top: 100%;
+            left: 0;
+            width: 200px;
+            border-radius: 5px;
+        }
+
+        .submenu li a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #444;
+        } 
+        
+        .submenu li a:hover {
+            background: #ffcc00;
+            color: #1b1b1b;
+        }
+
+        .menu li:hover .submenu {
+            display: block;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 25px;
+            background: #2b2b2b;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #ffcc00;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 15px;
+            background-color: #ffcc00;
+            color: #1b1b1b;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #e6b800;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #222;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+  </style>
+</head>
+<body>
+  <header>
+    France Milsim - Serveur Arma Reforger
+  </header>
+  <nav>
+    <ul class="menu">
+      <li>
+        <a href="index.html">Accueil</a>
+      </li>
+      <li>
+        <a href="#">Informations ▼</a>
+        <ul class="submenu">
+          <li>
+            <a href="recrutement.html">Recrutement</a>
+          </li>
+           <li>
+            <a href="candidature.html">candidature</a>
+          </li>
+           <li>
+            <a href="grades.html">Grades</a>
+          </li>
+          <li>
+            <a href="joueurs.html">Joueurs</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://discord.gg/ton-lien" target="_blank">Discord</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h2>Bienvenue sur France Milsim</h2>
+    <p>France Milsim est un serveur communautaire dédié à <strong>Arma Reforger</strong>. Nous proposons une expérience de jeu immersive, basée sur des scénarios militaires réalistes et un gameplay coopératif.</p><a href="recrutement.html" class="button">Rejoindre le serveur</a>
+  </div>
+  <footer>
+    France Milsim © 2025 - Tous droits réservés
+  </footer>
+</body>
+</html>

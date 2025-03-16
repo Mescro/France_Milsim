@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidature - France Milsim</title>
+<style>
+    body {
+        font-family: "Arial", sans-serif;
+        background-color: #1b1b1b;
+        color: #dcdcdc;
+        margin: 0;
+        padding: 0;
+    }
+    h1, h2 {
+        color: #ffcc00;
+    }
+    a {
+        color: #ffcc00;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+body {
+    background-image: url('https://www.army.mod.uk/media/10459/hero-para.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+</style>
+</head>
+<body>
+  <h1>Formulaire de Candidature</h1>
+  <form id="candidatureForm" name="candidatureForm">
+    <label>Pseudo :</label> <input type="text" id="pseudo" required=""><br>
+    <label>Âge :</label> <input type="number" id="age" required=""><br>
+    <label>Motivation :</label> 
+    <textarea id="motivation" required=""></textarea><br>
+    <button type="submit">Envoyer</button>
+  </form>
+  <h2>Statut :</h2>
+  <p id="result"></p>
+  <script>
+        document.getElementById("candidatureForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let pseudo = document.getElementById("pseudo").value;
+            let age = document.getElementById("age").value;
+            let motivation = document.getElementById("motivation").value;
+            
+            let webhookURL = "https://discord.com/api/webhooks/1350819104289722409/pWNcnu1Yl45jCe5vLeomBV0Fsg-5RfdGF7UFGD9X7Xd9-Qvkhv92OKbYT8-WAXkwydnO"            
+            let data = {
+                content: "**Nouvelle Candidature** :envelope_with_arrow:\n\n**Pseudo :** " + pseudo + "\n**Âge :** " + age + "\n**Motivation :** " + motivation
+            };
+
+            fetch(webhookURL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            }).then(() => {
+                document.getElementById("result").innerHTML = "Candidature envoyée sur Discord avec succès !";
+            }).catch(() => {
+                document.getElementById("result").innerHTML = "Erreur d'envoi, réessayez.";
+            });
+        });
+  </script>
+</body>
+</html>
